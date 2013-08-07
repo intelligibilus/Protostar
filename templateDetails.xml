@@ -68,6 +68,17 @@
 					description="JFIELD_ALT_PAGE_TITLE_LABEL"
 					filter="string" />
 
+                <field name="sitetitlelogo"
+                       type="radio"
+                       class="btn-group"
+                       default="1"
+                       label="TPL_PROTOSTAR1_SITETITLELOGO_LABEL"
+                       description="TPL_PROTOSTAR1_SITETITLELOGO_DESC"
+                        >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
 				<field name="sitedescription"  type="text" default=""
 					label="JGLOBAL_DESCRIPTION"
 					description="JGLOBAL_SUBHEADING_DESC"
@@ -87,10 +98,6 @@
 				<field name="googleFontName" class="" type="text" default="Open+Sans"
 					label="TPL_PROTOSTAR1_FONT_NAME_LABEL"
 					description="TPL_PROTOSTAR1_FONT_NAME_DESC" />
-
-                <field name="googleFontNameBody" class="" type="text" default="Open+Sans"
-                       label="TPL_PROTOSTAR1_FONT_NAMEBODY_LABEL"
-                       description="TPL_PROTOSTAR1_FONT_NAMEBODY_DESC" />
 
 				<field name="fluidContainer"
 					type="radio"
@@ -117,6 +124,7 @@
                 <field name="siteName" class="" type="text" default=""
                        label="TPL_PROTOSTAR1_SITENAME_LABEL"
                        description="TPL_PROTOSTAR1_SITENAME_DESC" />
+
 
 			</fieldset>
 		</fields>

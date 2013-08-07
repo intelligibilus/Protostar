@@ -78,7 +78,15 @@ else
 {
 	$logo = '<span class="site-title" title="'. $sitename .'">'. $sitename .'</span>';
 }
+
+// if parameter is set to display both the logo and the title...
+if ($this->params->get('sitetitlelogo'))
+{
+    $logo = '<img src="'. JUri::root() . $this->params->get('logoFile') .'" alt="'. $sitename .'" />';
+    $logo .= '&nbsp;<span class="site-title" title="'. $sitename .'">'. htmlspecialchars($this->params->get('sitetitle')) .'</span>';
+}
 ?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
@@ -94,14 +102,6 @@ else
 			h1,h2,h3,h4,h5,h6,.site-title{
 				font-family: '<?php echo str_replace('+', ' ', $this->params->get('googleFontName'));?>', sans-serif;
 			}
-        <link href='http://fonts.googleapis.com/css?family=<?php echo $this->params->get('googleFontNameBody');?>' rel='stylesheet' type='text/css' />
-         <style type="text/css">
-            html body{
-                font-family: '<?php echo str_replace('+', ' ', $this->params->get('googleFontNameBody'));?>', sans-serif;
-            }
-
-
-
 		</style>
 	<?php
 	}
