@@ -114,8 +114,9 @@
                     <option value="1">JYES</option>
                 </field>
 
-
-
+                <field name="siteName" class="" type="text" default=""
+                       label="TPL_PROTOSTAR1_SITENAME_LABEL"
+                       description="TPL_PROTOSTAR1_SITENAME_DESC" />
 
 			</fieldset>
 		</fields>

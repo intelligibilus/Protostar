@@ -210,8 +210,13 @@ else
          	    echo JText::_('TPL_PROTOSTAR1_BACKTOTOP');
          	    echo "</a></p>";
             }
+
+            if ($this->params->get('siteName') != ""){
+                $sitename = $this->params->get('siteName');
+            }
             ?>
 			<p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
+
 		</div>
 	</footer>
 	<jdoc:include type="modules" name="debug" style="none" />
