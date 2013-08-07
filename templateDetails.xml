@@ -98,6 +98,21 @@
 					<option value="0">TPL_PROTOSTAR_STATIC</option>
 					<option value="1">TPL_PROTOSTAR_FLUID</option>
 				</field>
+
+                <field name="backtotop"
+                       type="radio"
+                       class="btn-group"
+                       default="1"
+                       label="TPL_PROTOSTAR_BACKTOTOP_LABEL"
+                       description="TPL_PROTOSTAR_BACKTOTOP_DESC"
+                        >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+
+
+
 			</fieldset>
 		</fields>
 	</config>
