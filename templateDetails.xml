@@ -88,6 +88,10 @@
 					label="TPL_PROTOSTAR_FONT_NAME_LABEL"
 					description="TPL_PROTOSTAR_FONT_NAME_DESC" />
 
+                <field name="googleFontNameBody" class="" type="text" default="Open+Sans"
+                       label="TPL_PROTOSTAR_FONT_NAMEBODY_LABEL"
+                       description="TPL_PROTOSTAR_FONT_NAMEBODY_DESC" />
+
 				<field name="fluidContainer"
 					type="radio"
 					class="btn-group"
