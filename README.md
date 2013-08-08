@@ -13,4 +13,7 @@ Using this fork for my new J!3.1 LaSalleMart.com.
 (I want my main menu to display in the footer for smartphones, in the header otherwise)
 
 
+##LESS and CSS
+* I did a no-no and modified template.css directly.
+
 -Bob
