@@ -83,7 +83,9 @@ else
 if ($this->params->get('sitetitlelogo'))
 {
     $logo = '<img src="'. JUri::root() . $this->params->get('logoFile') .'" alt="'. $sitename .'" />';
+    $logo .= '<span class="hidden-phone">';
     $logo .= '&nbsp;<span class="site-title" title="'. $sitename .'">'. htmlspecialchars($this->params->get('sitetitle')) .'</span>';
+    $logo .= '</span>';
 }
 ?>
 
@@ -197,7 +199,11 @@ if ($this->params->get('sitetitlelogo'))
 			</div>
 		</div>
 	</div>
-	<!-- Footer -->
+
+
+
+
+    <!-- Footer -->
 	<footer class="footer" role="contentinfo">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
 			<hr />
