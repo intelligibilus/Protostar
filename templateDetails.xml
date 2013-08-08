@@ -128,6 +128,18 @@
                        description="TPL_PROTOSTAR1_SITENAME_DESC" />
 
 
+                <field name="displayCopyright"
+                       type="radio"
+                       class="btn-group"
+                       default="1"
+                       label="TPL_PROTOSTAR1_DISPLAYCOPYRIGHT_LABEL"
+                       description="TPL_PROTOSTAR1_DISPLAYCOPYRIGHT_DESC"
+                        >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+
 			</fieldset>
 		</fields>
 	</config>

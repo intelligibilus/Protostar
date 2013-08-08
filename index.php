@@ -208,37 +208,44 @@ if ($this->params->get('sitetitlelogo'))
 		</div>
 	</div>
 
-    <!-- Display these modules just above the footer module position when viewport > phone -->
-    <span class="visible-phone">
-        <footer class="footer" role="contentinfo">
-            <div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
-                <jdoc:include type="modules" name="footer-visible-phone" style="none" />
-            </div>
-         </footer>
-    </span>
-
-
-
 
     <!-- Footer -->
 	<footer class="footer" role="contentinfo">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
-			<hr />
+
+            <!-- Display these modules just above the footer module position when viewport > phone -->
+            <?php if ($this->countModules('footer-visible-phone')) { ?>
+                    <span class="visible-phone">
+                        <hr style="height: 5px; border: 0px solid rgba(0,0,0,0.075); border-top-width: 1px;" />
+                        <jdoc:include type="modules" name="footer-visible-phone" style="none" />
+                    </span>
+            <?php } ?>
+
+            <hr style="height: 5px; border: 0px solid rgba(0,0,0,0.075); border-top-width: 1px;" />
 			<jdoc:include type="modules" name="footer" style="none" />
 
             <?php
-            if ($this->params->get('backtotop'))
+            // Display the copyright notice if param is set
+            if ($this->params->get('displayCopyright') )
             {
-         	    echo "<p class=\"pull-right\"><a href=\"#top\" id=\"back-top\">";
-         	    echo JText::_('TPL_PROTOSTAR1_BACKTOTOP');
-         	    echo "</a></p>";
-            }
+                // If the siteName param is set (ie, not blank), then use the param in the
+                // copyright notice. Else, use Joomla's site name
+                if ($this->params->get('siteName') != ""){
+                    $sitename = $this->params->get('siteName');
+                }
+            ?>
+    			<p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
+            <?php } ?>
 
-            if ($this->params->get('siteName') != ""){
-                $sitename = $this->params->get('siteName');
+
+            <?php
+            if ( $this->params->get('backtotop') )
+            {
+                echo "&nbsp;&nbsp;<a href=\"#top\" id=\"back-top\">";
+                echo JText::_('TPL_PROTOSTAR1_BACKTOTOP');
+                echo "</a>";
             }
             ?>
-			<p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
 
 		</div>
 	</footer>
