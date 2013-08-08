@@ -170,7 +170,15 @@ if ($this->params->get('sitetitlelogo'))
 				<jdoc:include type="modules" name="position-1" style="none" />
 			</nav>
 			<?php endif; ?>
-			<jdoc:include type="modules" name="banner" style="xhtml" />
+
+            <!-- Hide these modules just above the banner ("menu") module position when viewport = phone -->
+            <span class="hidden-phone">
+                <nav class="navigation" role="navigation">
+                    <jdoc:include type="modules" name="header-hidden-phone" style="xhtml" />
+                </nav>
+            </span>
+
+    		<jdoc:include type="modules" name="banner" style="xhtml" />
 			<div class="row-fluid">
 				<?php if ($this->countModules('position-8')) : ?>
 				<!-- Begin Sidebar -->
@@ -199,6 +207,15 @@ if ($this->params->get('sitetitlelogo'))
 			</div>
 		</div>
 	</div>
+
+    <!-- Display these modules just above the footer module position when viewport > phone -->
+    <span class="visible-phone">
+        <footer class="footer" role="contentinfo">
+            <div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
+                <jdoc:include type="modules" name="footer-visible-phone" style="none" />
+            </div>
+         </footer>
+    </span>
 
 
 
