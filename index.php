@@ -241,9 +241,12 @@ if ($this->params->get('sitetitlelogo'))
             <?php
             if ( $this->params->get('backtotop') )
             {
+                echo "<center>";
                 echo "&nbsp;&nbsp;<a href=\"#top\" id=\"back-top\">";
                 echo JText::_('TPL_PROTOSTAR1_BACKTOTOP');
                 echo "</a>";
+                echo "</center>";
+                echo "<hr style=\"height: 5px; border: 0px solid rgba(0,0,0,0.075); border-top-width: 1px;\" />";
             }
             ?>
 
