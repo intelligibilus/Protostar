@@ -224,6 +224,13 @@ if ($this->params->get('sitetitlelogo'))
             <hr style="height: 5px; border: 0px solid rgba(0,0,0,0.075); border-top-width: 1px;" />
 			<jdoc:include type="modules" name="footer" style="none" />
 
+            <?php if ($this->countModules('footer-knowledgebase')) { ?>
+                <hr style="height: 5px; border: 0px solid rgba(0,0,0,0.075); border-top-width: 1px;" />
+                <jdoc:include type="modules" name="footer-knowledgebase" style="none" />
+            <? } ?>
+
+
+
             <?php
             // Display the copyright notice if param is set
             if ($this->params->get('displayCopyright') )
