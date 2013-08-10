@@ -229,6 +229,11 @@ if ($this->params->get('sitetitlelogo'))
                 <jdoc:include type="modules" name="footer-knowledgebase" style="none" />
             <? } ?>
 
+            <?php if ($this->countModules('footer-stuff')) { ?>
+                <hr style="height: 5px; border: 0px solid rgba(0,0,0,0.075); border-top-width: 1px;" />
+                <jdoc:include type="modules" name="footer-stuff" style="none" />
+            <? } ?>
+
 
 
             <?php

@@ -46,6 +46,7 @@
         <position>footer-visible-phone</position>
         <position>header-hidden-phone</position>
         <position>footer-knowledgebase</position>
+        <position>footer-stuff</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.tpl_protostar1.ini</language>
